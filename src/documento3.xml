@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE informe [
+        <!ELEMENT informe (head,datos*)>
+        <!ELEMENT head (titulo,subtitulo,descripcion)>
+        <!ATTLIST head
+                fecha CDATA #REQUIRED>
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT subtitulo (#PCDATA)>
+        <!ELEMENT descripcion (#PCDATA)>
+        <!ELEMENT datos (region)*>
+        <!ELEMENT region (trimestre, libros_vendidos)*>
+        <!ATTLIST region
+                nombre CDATA #REQUIRED>
+        <!ELEMENT trimestre (#PCDATA)>
+        <!ELEMENT libros_vendidos (#PCDATA)>
+        ]>
+
+<informe>
+    <head fecha = "2021-09-30">
+        <titulo>Ediciones Aranada</titulo>
+        <subtitulo>Informe regional de ventas</subtitulo>
+        <descripcion>informe de ventas para las regiones Norte, Centro y Sur</descripcion>
+    </head>
+    <datos>
+        <region nombre = "norte">
+                <trimestre>1</trimestre>
+                <libros_vendidos>24000</libros_vendidos>
+                <trimestre>2</trimestre>
+                <libros_vendidos>38600</libros_vendidos>
+                <trimestre>3</trimestre>
+                <libros_vendidos>NO_INFO</libros_vendidos>
+                <trimestre>4</trimestre>
+                <libros_vendidos>NO_INFO</libros_vendidos>
+        </region>
+        <region nombre = "centro">
+                <trimestre>1</trimestre>
+                <libros_vendidos>NO_INFO</libros_vendidos>
+                <trimestre>2</trimestre>
+                <libros_vendidos>16080</libros_vendidos>
+                <trimestre>3</trimestre>
+                <libros_vendidos>25000</libros_vendidos>
+                <trimestre>4</trimestre>
+                <libros_vendidos>29000</libros_vendidos>
+        </region>
+        <region nombre="sur">
+                <trimestre>1</trimestre>
+                <libros_vendidos>27000</libros_vendidos>
+                <trimestre>2</trimestre>
+                <libros_vendidos>31400</libros_vendidos>
+                <trimestre>3</trimestre>
+                <libros_vendidos>40100</libros_vendidos>
+                <trimestre>4</trimestre>
+                <libros_vendidos>30000</libros_vendidos>
+        </region>
+    </datos>
+</informe>
